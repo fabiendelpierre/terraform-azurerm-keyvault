@@ -16,7 +16,7 @@ resource "azurerm_key_vault" "main" {
   sku_name = "standard"
 
   network_acls {
-    default_action              = "Deny"
+    default_action              = "Allow"
     bypass                      = "AzureServices"
     ip_rules                    = var.authorized_cidrs
     virtual_network_subnet_ids  = var.authorized_subnet_ids
